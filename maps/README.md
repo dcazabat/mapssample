@@ -1,15 +1,21 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Muestra de mapas en paralelo: **OpenStreetMap** (Leaflet + react-leaflet) y **Google Maps** (Embed API oficial), con dark mode, TailwindCSS 4 y TypeScript.
 
-Currently, two official plugins are available:
+## Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Comando                             | Qué hace                                                  |
+| ----------------------------------- | --------------------------------------------------------- |
+| `pnpm dev`                          | Dev server con HMR                                        |
+| `pnpm build`                        | Typecheck (`tsc --noEmit`) + build de producción          |
+| `pnpm typecheck`                    | Solo validación de tipos (TypeScript 7)                   |
+| `pnpm lint`                         | Lint con [oxlint](https://oxlint.rs/) (`--deny-warnings`) |
+| `pnpm format` / `pnpm format:check` | Formateo con Prettier                                     |
+| `pnpm test` / `pnpm test:watch`     | Tests con Vitest + Testing Library (jsdom)                |
+| `pnpm preview`                      | Preview del build de producción                           |
 
 ## Google Maps Embed API
 
 Copy `.env.example` to `.env` and set `VITE_GOOGLE_MAPS_EMBED_API_KEY` to enable the official Google Maps Embed API iframe.
 
 The app will show a fallback message until that key is available.
-
